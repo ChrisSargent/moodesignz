@@ -1,0 +1,47 @@
+.moo-button
+  +input-reset
+  +feature-text
+  display: block
+  max-width: 400px
+  margin: 0 auto
+  padding: 1em 3em
+  cursor: pointer
+  transition: background-color $transition_m
+  text-align: center
+
+.moo-button--see-more
+  $size: 3em
+  +input-reset
+  position: relative
+  display: inline-block
+  width: $size
+  height: $size
+  margin: 0 0.5em
+  cursor: pointer
+  vertical-align: middle
+  color: $font-color-body--inverted
+  border: 0.125em solid currentColor
+  border-radius: $size
+
+  &:hover
+    animation-name: pulse
+    animation-duration: 500ms
+    animation-timing-function: ease-in-out
+    animation-iteration-count: infinite
+    animation-direction: alternate
+
+  .moo-i-chevron--down
+    position: absolute
+    top: 75%
+    left: 50%
+    transform-origin: top left
+    pointer-events: auto
+    border-width: 4px
+
+@keyframes pulse
+  from
+    background-color: transparentize($font-color-body--inverted, 1)
+    box-shadow: 0 0 10px 10px transparentize($font-color-body--inverted, 1)
+  to
+    background-color: transparentize($font-color-body--inverted, 0.8)
+    box-shadow: 0 0 10px 10px transparentize($font-color-body--inverted, 0.8)

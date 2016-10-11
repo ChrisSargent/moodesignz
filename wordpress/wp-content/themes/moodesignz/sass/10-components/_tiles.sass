@@ -1,0 +1,106 @@
+%base_tile__container
+  +bg-cover
+  position: relative
+  display: inline-block
+  overflow: hidden
+  width: 100%
+  margin: -0.375em 0 0 -0.29em
+  // Allow for extra space on inline block
+  &::after
+    display: block
+    content: ' '
+
+%base_tile
+  +stretch
+  position: absolute
+  display: block
+  transition: background-color $transition-m
+  background-color: transparentize(#000000, 0.8)
+  &:hover
+    background-color: transparent
+
+%base_tile__title
+  font-size: $fs-ml
+  position: absolute
+  top: 50%
+  left: 50%
+  min-width: 60%
+  padding: 1em 1em
+  transition: all $transition-m
+  transform: translate(-50%, -50%)
+  text-align: center
+  letter-spacing: 0.1em
+  text-transform: uppercase
+  color: $font-color-button
+
+// ******************************* Default Tiles *******************************
+
+.moo-tiles__container
+  margin-right: -0.29em
+  padding: 0.375em 0 5em 0.29em
+
+  .moo-link-block + &
+    margin-top: 3em
+  // Realignment - allowing for extra space on inline block
+
+.moo-tile__container
+  @extend %base_tile__container
+
+  &::after
+    padding-bottom: 70%
+
+  @media (min-width: $media-s)
+    width: 50%
+
+  @media (min-width: $media-m)
+    width: 33.333%
+    &::after
+      padding-bottom: 100%
+
+.moo-tile
+  @extend %base_tile
+
+  &:hover
+    .moo-tile__title
+      border: $border-button
+      background-color: transparentize(#000000, 0.8)
+
+.moo-tile__title
+  @extend %base_tile__title
+  border: 1px solid transparent
+  background-color: transparent
+
+// ******************************* Gallery Tiles *******************************
+
+.moo-tile__container--gallery
+  @extend %base_tile__container
+
+  &::after
+    padding-bottom: 100%
+
+  @media (min-width: $media-xs)
+    width: 50%
+
+  @media (min-width: $media-sm)
+    width: 33.3%
+    &::after
+      padding-bottom: 100%
+
+  .moo-socialshare__container
+    opacity: 0
+    right: 0.25em
+    bottom: 0.25em
+    transition: opacity $transition-f
+
+  &:hover
+    .moo-socialshare__container
+      opacity: 1
+
+.moo-tile--gallery
+  @extend %base_tile
+  padding: 0 1px 0 1px
+  cursor: zoom-in
+  background: none
+
+  img
+    width: 100%

@@ -1,0 +1,90 @@
+=input-reset
+  appearance: none
+  font-family: inherit
+  font-size: inherit
+  font-weight: inherit
+  line-height: inherit
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  color: inherit
+  border: 0
+  border-radius: 0
+  outline: 0
+  outline-offset: -1px
+  background: none
+  -webkit-appearance: none
+  
+=stretch
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+=bg-cover
+  background: no-repeat center
+  background-size: cover
+
+=clearfix
+  &::after
+    display: table
+    clear: both
+    content: ''
+
+=link-colors
+  color: $font-color-link
+  &:hover,
+  &:active
+    color: lighten($font-color-link, 10%)
+
+=fancy-link
+  position: relative
+  transition: all $transition-m
+  text-decoration: none
+  background-color: transparentize($bg-color-default, 1)
+
+  &::before
+    position: absolute
+    bottom: 0
+    left: 0
+    visibility: hidden
+    width: 100%
+    height: 2px
+    content: ' '
+    transition: inherit
+    transform: scaleX(0)
+    background-color: transparentize($bg-color-default, 0.4)
+
+  &:hover::before
+    visibility: visible
+    transform: scaleX(1)
+
+=sr-only
+  position: absolute
+  overflow: hidden
+  clip: rect(0,0,0,0)
+  width: 1px
+  height: 1px
+  margin: -1px
+  padding: 0
+  border: 0
+
+=vcenter
+  position: relative
+  top: 50%
+  transform: translateY(-50%)
+
+=container-l
+  max-width: 960px
+  margin: 0 auto
+
+=container-xl
+  max-width: 1440px
+  margin: 0 auto
+
+=feature-text
+  font-family: $font-family-heading
+  font-weight: 300
+  letter-spacing: 0.2em
+  text-transform: uppercase
+  color: $font-color-body--inverted

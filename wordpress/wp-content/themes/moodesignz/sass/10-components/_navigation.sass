@@ -1,0 +1,159 @@
+nav
+  input[type='checkbox']
+    display: none
+
+.moo-nav
+  position: fixed
+  z-index: $z-mid
+  top: 0
+  right: 0
+  left: 0
+  width: 100%
+  transition: all $transition-s
+  transform: translate3d(0,0,1000px)
+  text-align: center
+  background-color: transparentize($bg-color-dark, 1)
+
+  &--shrink
+    background-color: transparentize($bg-color-dark, 0.05)
+
+  .moo-i--close
+    font-size: $fs-xl
+
+  li
+    transition: all $transition_s
+    a
+      +fancy-link
+      +feature-text
+      display: block
+      padding: 2em
+      cursor: pointer
+      &:hover
+        background-color: transparentize($bg-color-default, 0.9)
+
+    + li
+      border-top: 1px solid transparentize($font-color-body--inverted, 0.8)
+
+.moo-nav--footer
+  font-size: $fsr-ms
+  li a
+    color: $brand-color-desat
+    text-decoration: none
+    padding: 0.25em 0
+    display: block
+    min-height: 40px
+
+    &:hover
+      text-decoration: underline
+
+  li a:not([href])
+    +feature-text
+    &:hover
+      text-decoration: none
+
+
+  ul
+    float: left
+    padding: 0 0.5em
+    width: 50%
+
+    &:first-child
+      padding-left: 0
+    &:last-child
+      padding-right: 0
+
+// ******************************* Nav Toggles *********************************
+
+.moo-nav__toggle
+  $barWidth: 30px
+  $barHeight: 4px
+  $spacing: 6px
+  display: block
+  width: $barWidth
+  margin: 1em
+  color: $font-color-body--inverted
+
+  &--text
+    +sr-only
+
+  &--bar
+    display: block
+    height: $barHeight
+    margin: $spacing 0
+    border-radius: 2px
+    background-color: currentColor
+
+  &--bars
+    cursor: pointer
+
+    &::before,
+    &::after
+      @extend .moo-nav__toggle--bar
+      content: ' '
+
+// ********************************* Nav List **********************************
+
+.moo-nav__list
+  +clearfix
+
+// ***************************** Nav Interactivity *****************************
+
+.moo-nav__list
+  max-height: 0
+  transition: all $transition-m
+  transform: translate3d(0, -400px, 0)
+  visibility: hidden
+  pointer-events: none
+  overflow: hidden
+
+#moo-nav__toggle:checked + #moo-nav
+  background-color: transparentize($bg-color-dark, 0.05)
+
+  .moo-nav__list
+    transform: translate3d(0, 0, 0)
+    max-height: 600px
+    visibility: visible
+    pointer-events: auto
+
+// ****************************** Nav Responsive *******************************
+
+@media (min-width: $nav-break)
+
+  .moo-nav
+    padding: 1em 0
+    text-align: right
+
+    &--shrink
+      padding: 0
+
+  .moo-nav__toggle
+    display: none
+
+  .moo-nav__list
+    display: inline-block
+    margin-bottom: -0.375em
+    max-height: none
+    transform: none
+    pointer-events: auto
+    visibility: visible
+    padding-right: 1em
+
+    li
+      float: left
+
+      + li
+        margin-left: 1.5em
+        border: none
+
+      a
+        padding: 1em
+
+  .moo-nav--footer li a
+    min-height: 0
+
+@media (min-width: $nav-centre)
+  .moo-nav
+    text-align: center
+
+  .moo-nav__list
+    padding-right: 0

@@ -1,0 +1,79 @@
+.moo-form
+  +clearfix
+  font-size: $fsr-m
+  max-width: 600px
+  margin: 0 auto
+  padding: 2em 0
+  text-align: left
+
+  table
+    overflow: hidden
+    width: 100%
+
+    label
+      font-family: $font-family-heading
+      margin: 0 0.3em
+      color: $font-color-body--inverted
+
+  td
+    position: relative
+    border-bottom: 4px solid transparent
+
+    &:nth-child(1)
+      border-right: 4px solid transparent
+      background-color: $bg-color-mid
+
+    &:nth-child(2)
+      width: 100%
+      background-color: $bg-color-muted
+
+
+  input[type='text'],
+  input[type='email'],
+  textarea,
+  select
+    font-family: $font-family-heading
+    font-weight: 300
+    width: 100%
+    padding: 1em 0.5em
+
+  select
+    padding-right: 2.5em
+
+  .moo-i-chevron--down
+    position: absolute
+    top: 35%
+    right: 0.5em
+
+  textarea
+    display: block
+    margin: 2em 0 3em
+    padding: 0.5em
+    resize: none
+    border: 1px solid $bg-color-mid
+    background-color: $bg-color-muted
+
+  button[type='submit']
+    @extend .moo-button
+    background-color: $brand-color-complementary
+
+    &:hover
+      background-color: lighten($brand-color-complementary, 5%)
+
+  @media (min-width: $media-s)
+    table label
+      margin: 0 1em
+
+    .moo-i-chevron--down
+      right: 1em
+
+.moo-home__section:nth-child(even)
+  .moo-form
+    textarea,
+    td:nth-child(2)
+      background-color: white
+
+.moo-input__wrapper
+  text-align: center
+  table + &
+    padding-top: 2em

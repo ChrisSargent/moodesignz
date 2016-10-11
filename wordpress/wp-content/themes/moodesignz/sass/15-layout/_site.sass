@@ -1,0 +1,66 @@
+html,
+body
+  width: 100%
+  height: 100%
+  margin: 0
+  padding: 0
+  border: 0
+
+body
+  background: $bg-color-default
+  color: $font-color-body
+  font-family: $font-family-body
+  font-weight: 400
+  line-height: $body-line-height
+  font-size: 100%
+
+.moo-site__main
+  background: $bg-color-default
+
+.moo-site__container
+  +clearfix
+  +container-l
+  padding: 2em 1em
+
+.moo-site__container--nopad
+  +clearfix
+  +container-l
+
+.moo-site__container--wide
+  +clearfix
+  +container-xl
+  padding: 2em 1em
+
+  .moo-site__container + &
+    padding-top: 0
+
+.moo-site__container--wide--nopad
+  +clearfix
+  +container-xl
+
+img
+  max-width: 100%
+  height: auto
+
+.moo-site__column
+  text-align: center
+
+.moo-site__footer
+  background-color: $bg-color-dark
+  color: $font-color-body--inverted
+  position: relative
+  z-index: $z-top
+
+@media (min-width: $media-xs)
+  .moo-site__container,
+  .moo-site__container--wide
+    padding: 4em 1em
+
+  .moo-site__column
+    width: 50%
+    float: left
+    text-align: left
+
+    &.reorder
+      float: right
+      width: auto

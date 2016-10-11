@@ -1,0 +1,25 @@
+{
+  "name": "moodesignz-site",
+  "description": "Website for Moodesignz interior design.",
+  "main": "",
+  "authors": [
+    "Chris Sargent from Sticky Pixel"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/ChrisSargent/moodesignz",
+  "moduleType": [
+    "node"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "~4.2.6",
+    "reset-css": "~2.0.2011012603"
+  }
+}

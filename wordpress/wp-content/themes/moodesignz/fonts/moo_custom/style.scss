@@ -1,0 +1,82 @@
+@import "variables";
+
+@font-face {
+    font-family: 'moo_custom';
+    src:    url('#{$icomoon-font-path}/moo_custom.eot?kxbhqg');
+    src:    url('#{$icomoon-font-path}/moo_custom.eot?kxbhqg#iefix') format('embedded-opentype'),
+        url('#{$icomoon-font-path}/moo_custom.ttf?kxbhqg') format('truetype'),
+        url('#{$icomoon-font-path}/moo_custom.woff?kxbhqg') format('woff'),
+        url('#{$icomoon-font-path}/moo_custom.svg?kxbhqg#moo_custom') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+i {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'moo_custom' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.moo-i-houzz-color .path1 {
+    &:before {
+        content: $moo-i-houzz-color-path1;    
+        color: rgb(116, 185, 67);
+    }
+}
+.moo-i-houzz-color .path2 {
+    &:before {
+        content: $moo-i-houzz-color-path2;    
+        margin-left: -0.5810546875em;    
+        color: rgb(111, 143, 157);
+    }
+}
+.moo-i-houzz {
+    &:before {
+        content: $moo-i-houzz;
+    }
+}
+.moo-i-twitter {
+    &:before {
+        content: $moo-i-twitter;
+    }
+}
+.moo-i-facebook {
+    &:before {
+        content: $moo-i-facebook;
+    }
+}
+.moo-i-google-plus {
+    &:before {
+        content: $moo-i-google-plus;
+    }
+}
+.moo-i-linkedin {
+    &:before {
+        content: $moo-i-linkedin;
+    }
+}
+.moo-i-youtube {
+    &:before {
+        content: $moo-i-youtube;
+    }
+}
+.moo-i-instagram {
+    &:before {
+        content: $moo-i-instagram;
+    }
+}
+.moo-i-pinterest {
+    &:before {
+        content: $moo-i-pinterest;
+    }
+}
+

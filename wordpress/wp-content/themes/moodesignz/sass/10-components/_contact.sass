@@ -1,0 +1,32 @@
+.moo-legal
+  text-align: center
+  padding: 4em 0 2em
+  color: $brand-color-desat
+
+.moo-contact__details,
+.moo-legal
+  clear: both
+  font-size: $fsr-ms
+  padding-bottom: 4em
+
+  dd + dt
+    padding-top: 1em
+
+.moo-address,
+.moo-legal dt
+  +sr-only
+
+.moo-address + dd br
+  display: none
+
+.moo-contact__details
+  dt
+    +feature-text
+
+    + dd a
+      color: $brand-color-desat
+      font-size: $fs-ml
+      text-decoration: none
+
+      &:hover
+        text-decoration: underline

@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'moo_custom';
+    src:    url('fonts/moo_custom.eot?kxbhqg');
+    src:    url('fonts/moo_custom.eot?kxbhqg#iefix') format('embedded-opentype'),
+        url('fonts/moo_custom.ttf?kxbhqg') format('truetype'),
+        url('fonts/moo_custom.woff?kxbhqg') format('woff'),
+        url('fonts/moo_custom.svg?kxbhqg#moo_custom') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+i {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'moo_custom' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.moo-i-houzz-color .path1:before {
+    content: "\e901";
+    color: rgb(116, 185, 67);
+}
+.moo-i-houzz-color .path2:before {
+    content: "\e902";
+    margin-left: -0.5810546875em;
+    color: rgb(111, 143, 157);
+}
+.moo-i-houzz:before {
+    content: "\e900";
+}
+.moo-i-twitter:before {
+    content: "\f099";
+}
+.moo-i-facebook:before {
+    content: "\f09a";
+}
+.moo-i-google-plus:before {
+    content: "\f0d5";
+}
+.moo-i-linkedin:before {
+    content: "\f0e1";
+}
+.moo-i-youtube:before {
+    content: "\f167";
+}
+.moo-i-instagram:before {
+    content: "\f16d";
+}
+.moo-i-pinterest:before {
+    content: "\f231";
+}
+

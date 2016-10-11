@@ -1,0 +1,70 @@
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400,300,700|Merriweather+Sans:400,300,700)
+
+a
+  +link-colors
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  font-family: $font-family-heading
+  font-weight: 700
+h1
+  margin: 0
+  font-size: 2em
+  margin-bottom: 1.5em
+h2
+  font-size: 1.8em
+h3
+  font-size: 1.6em
+h4
+  font-size: 1.4em
+h5
+  font-size: 1.2em
+h6
+  font-size: 1em
+
+a.reset-color,
+a.reset-color:link,
+a.reset-color:visited
+  color: currentColor
+
+.moo-link-block
+  display: block
+  margin: 3em auto 0
+  text-align: center
+
+p
+  max-width: 50em
+  margin: 0 auto 2em
+  line-height: 1.8
+
+.moo-i--close,
+.lb-close
+  line-height: 0.5
+  display: inline-block
+  margin-top: 0.09em
+  margin-right: 0.25em
+  cursor: pointer
+  // Re-center
+  vertical-align: top
+  &::before
+    content: '\00d7'
+
+blockquote
+  background-color: $brand-color-muted
+  display: block
+  padding: 2em
+  max-width: 50em
+  margin: 0 auto
+
+  + blockquote
+    margin-top: 1em
+
+  em
+    font-style: italic
+
+  p
+    margin: 0

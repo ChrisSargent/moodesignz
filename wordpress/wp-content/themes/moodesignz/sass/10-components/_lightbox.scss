@@ -1,0 +1,172 @@
+/*!
+ * Lightbox v2.8.2
+ * by Lokesh Dhakar
+ *
+ * More info:
+ * http://lokeshdhakar.com/projects/lightbox2/
+ *
+ * Copyright 2007, 2015 Lokesh Dhakar
+ * Released under the MIT license
+ * https://github.com/lokesh/lightbox2/blob/master/LICENSE
+ */
+.lightboxOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: black;
+  opacity: 0.8;
+  display: none;
+}
+.lightbox {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: 10000;
+  text-align: center;
+  font-weight: normal;
+}
+.lightbox .lb-image {
+  display: block;
+  height: auto;
+  max-width: inherit;
+}
+.lb-outerContainer {
+  @include clearfix;
+  position: relative;
+  background-color: transparentize(#000000, 0.5);
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+}
+.lb-container {}
+.lb-loader {
+  position: absolute;
+  top: 43%;
+  left: 0;
+  height: 25%;
+  width: 100%;
+  text-align: center;
+}
+.lb-cancel {
+  $size: 4em;
+  display: block;
+  width: $size;
+  height: $size;
+  margin: 0 auto;
+  border-radius: $size;
+  border: 2px solid $font-color-body--inverted;
+  border-left-style: none;
+  border-top-color: transparent;
+  animation-name: spin;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 1000ms;
+}
+.lb-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+.lb-container > .nav {
+  left: 0;
+}
+a.lb-next,
+a.lb-prev {
+  color: $font-color-body--inverted;
+  height: 100%;
+  cursor: pointer;
+  display: block;
+  opacity: 0;
+  transition: opacity $transition-s;
+  text-decoration: none;
+  background-color: transparentize(#000000, 0.5);
+  position: relative;
+  font-size: 3em;
+  width: 2em;
+  &:hover {
+    opacity: 1;
+  }
+  &::before {
+    width: 2em;
+    display: inline;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @media (min-width: $media-s) {
+    font-size: 4em;
+  }
+  @media (min-width: $media-m) {
+    font-size: 6em;
+  }
+}
+a.lb-prev {
+  float: left;
+  &::before {
+    content: "\2329";
+    left: -0.4em;
+  }
+}
+a.lb-next {
+  float: right;
+  &::before {
+    content: "\232A";
+    left: 0.4em;
+  }
+}
+.lb-dataContainer {
+  pointer-events: none;
+  margin: 1em auto;
+  width: 100%;
+  position: relative;
+  &:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+}
+.lb-data {
+  color: $font-color-body--inverted;
+}
+.lb-closeContainer {
+  text-align: right;
+  margin: 1em 10px 1em 1em;
+  pointer-events: none;
+  .lb-close {
+    color: $font-color-body--inverted;
+    $size: 4em;
+    text-align: center;
+    width: $size / 1.2;
+    height: $size / 1.2;
+    border-radius: $size;
+    border: 1px solid currentColor;
+    margin: 0;
+    line-height: 0.975;
+    opacity: 0.7;
+    transition: opacity $transition-f;
+    pointer-events: auto;
+    &::before {
+      font-size: $size;
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+.lb-data .lb-details {}
+.lb-data .lb-caption {}
+.lb-data .lb-number {}

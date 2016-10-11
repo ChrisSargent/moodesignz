@@ -1,0 +1,17 @@
+/* Start Custom CSS */
+
+*,
+*::before,
+*::after
+  box-sizing: border-box
+
+
+input[type='text'],
+input[type='email'],
+input[type='search'],
+button[type='submit'],
+textarea,
+select
+  +input-reset
+  &:focus
+    outline: 1px solid $brand-color-complementary

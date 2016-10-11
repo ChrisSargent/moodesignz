@@ -158,6 +158,13 @@ function moo_get_og_excerpt($this_post){
     return $the_excerpt;
 }
 
+// Remove Comments and Posts Tab from admin page.
+add_action('admin_menu', 'aqvaluxe_custom_admin_tabs');
+function aqvaluxe_custom_admin_tabs()
+{
+    remove_menu_page('edit-comments.php');
+    remove_menu_page('edit.php');
+}
 
 // Remove unnecessary parts from the standard wp header
 remove_action('wp_head', 'rsd_link'); // Weblog Client Link

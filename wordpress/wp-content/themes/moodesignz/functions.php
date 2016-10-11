@@ -1,14 +1,5 @@
 <?php
 
-
-// ***************************** Swapping Servers *******************************
-
-// update_option( 'siteurl', 'http://www.moodesignz.com' );
-// update_option( 'home', 'http://www.moodesignz.com' );
-
-// update_option('siteurl', 'http://moodesignz.dev/wordpress/');
-// update_option('home', 'http://moodesignz.dev/wordpress/');
-
 // ******************************* Theme Support *******************************
 
 add_theme_support('title-tag');

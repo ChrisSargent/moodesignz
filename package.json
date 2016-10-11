@@ -1,11 +1,12 @@
 {
-  "name": "Moodesignz-Site",
+  "name": "moodesignz",
   "version": "1.0.1",
   "description": "Website for Moodesignz interior design.",
   "author": "Chris Sargent from Sticky Pixel",
   "license": "MIT",
   "repository": {
-    "type": "git"
+    "type": "git",
+    "url": "git+ssh://git@github.com/ChrisSargent/moodesignz.git"
   },
   "dependencies": {
     "grunt": "^1.0.1"
@@ -22,5 +23,13 @@
     "grunt-postcss": "*",
     "grunt-rsync": "*",
     "load-grunt-config": "*"
-  }
+  },
+  "main": "wordpress/wp-content/themes/moodesignz/index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/ChrisSargent/moodesignz/issues"
+  },
+  "homepage": "https://www.moodesignz.com"
 }

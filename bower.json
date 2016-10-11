@@ -1,12 +1,12 @@
 {
-  "name": "moodesignz-site",
+  "name": "moodesignz",
   "description": "Website for Moodesignz interior design.",
-  "main": "",
+  "main": "wordpress/wp-content/themes/moodesignz/index.php",
   "authors": [
     "Chris Sargent from Sticky Pixel"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/ChrisSargent/moodesignz",
+  "homepage": "http://www.moodesignz.com",
   "moduleType": [
     "node"
   ],

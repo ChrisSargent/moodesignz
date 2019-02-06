@@ -1,22 +1,21 @@
 .moo-site__logo
   position: absolute
-  top: 0.9em
-  right: 0.5em
+  top: 1.1em
+  right: 1em
   width: 125px
   transition: all $transition-m
 
-  @media (min-width: $nav-break)
-    top: 1em
-    left: 1em
-
   @media (min-width: $media-s)
-    top: 0.3em
     width: 200px
+	
+  @media (min-width: $nav-break)
+    top: 1.9em
+    left: 1.5em
 
   @media (min-width: $media-l)
-    top: 0.75em
+    top: 1.7em
     width: 250px
 
     .moo-nav--shrink &
-      top: 0.3em
+      top: 0.9em
       width: 200px

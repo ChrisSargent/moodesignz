@@ -1,4 +1,4 @@
-<form class="moo-form" action="http://campaigns.stickypixel.com/t/j/s/qadry/" method="post">
+<form class="moo-form js-cm-form" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="A61C50BEC994754B1D79C5819EC1255C6AABA1343A3E2A6E8397380DD07AA359FC7CE9E1ECA203BB86DE909910F7D13872DCC8691785AFEA7E0A8E5DE0F887C2">
   <table>
     <tr>
       <td>
@@ -13,7 +13,7 @@
         <label for="moo-form__email">Email</label>
       </td>
       <td>
-        <input type="email" name="cm-qadry-qadry" id="moo-form__email" placeholder="youremail@address.com" required>
+        <input class="js-cm-email-input" type="email" name="cm-qadry-qadry" id="moo-form__email" placeholder="youremail@address.com" required>
       </td>
     </tr>
     <tr>
@@ -53,5 +53,6 @@
     <label for="moo-form__project">And finally, please tell us a little bit about your project and plans.</label>
     <textarea name="cm-f-vjrurt" id="moo-form__project" maxlength="500" rows=5 placeholder="E.g. which rooms are you planning? Is it a rennovation or new build? Is the project started or planned?"></textarea>
   </div>
-  <button type="submit">Get in touch</button>
+  <button type="submit" class="js-cm-submit-button">Get in touch</button>
 </form>
+<script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
